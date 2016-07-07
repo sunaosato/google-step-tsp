@@ -34,7 +34,6 @@ def solve(cities):
         if not rest:
             head.append(0)
             xs.append(head)
-#            return xs
 
         for i in rest:
             h = head[:]
@@ -43,16 +42,13 @@ def solve(cities):
             r.remove(i)
             perm(h,r)
 
-  #  kaizyo = math.factorial(N)
- #   zenbu = list(range(kaizyo))
     perm([],list(range(1,N)))
-    print xs
+#    print xs
 
 
     max = 10000000
 
     for conbi in xs:
-        print conbi
         sum = 0.0
         for i in conbi:
             sum += dist[current_city][i]
